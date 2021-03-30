@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>21 Savage Fans</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Carpe Diem Todo List</h1>
+    <h2>Tomorrow isn't guaranteed, so let's conquer today</h2>
+</header>
+<section class="info">
+    <h2>Add what you need to get done below</h2>
+</section>
+<section class="taskTotal">
+    <h2>Total Tasks: <span id="taskTotal">0</span> </h2>
+    
+</section>
+<section class="input">
+    <form action="/messages" method="POST">
+        <input id="userTask" name ="task" type="text" placeholder="Enter Task Here!">
+        <button id="addTask" type="submit">Add Task</button>
+    </form>
+    <section class="listBackground">
+        <ul id="taskList">
+        <% for(var i=0; i<messages.length; i++) {%>    
+            <li>
+                <span><%= messages[i].task %></span>
+            </li>
+        <% } %>
+        </ul>
+    </section>
+</section>
+<!-- <section class="add">
+    <button id="addTask" type="submit">Add Task</button>
+</section> -->
+<section class="clearButtons">
+    <button id="clearAll">Clear All</button> 
+    <button id="clearCompleted">Clear Completed</button>
+</section>
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
